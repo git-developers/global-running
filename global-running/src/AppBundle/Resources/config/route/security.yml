@@ -1,0 +1,4 @@
+app_security_login:
+    path: /login
+    defaults: { _controller: AppBundle:Security:login }
+    methods: [GET, POST]

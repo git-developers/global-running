@@ -1,0 +1,134 @@
+{% extends "AppBundle::template_splash.html.twig" %}
+
+{% block bodyclass %}
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {#
+    {% stylesheets
+        '@AppBundle/Resources/public/common/css/tree.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    #}
+
+    <style>
+
+    </style>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {#
+    {% javascripts
+    '@AppBundle/Resources/public/tree/js/formCreate.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    #}
+
+    <script type="text/javascript">
+
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+    {#<section class="content-header">#}
+        {#<h1>#}
+            {#<i class="fa fa-fw fa-dashboard"></i> Dashboard#}
+            {#<small>panel</small>#}
+        {#</h1>#}
+        {#<ol class="breadcrumb">#}
+            {#<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>#}
+            {#<li class="active">Dashboard</li>#}
+        {#</ol>#}
+    {#</section>#}
+
+    <section class="content" style="background-color: #86A914">
+        <form name="form-category-product">
+
+            <div class="row">
+                <section class="col-md-12 connectedSortable ui-sortable">
+                    <div class="box box-solid">
+
+                        <div class="box-header ui-sortable-handle" style="text-align: center">
+                            {#<i class="ion ion-android-list"></i>#}
+                            <i class="fa fa-fw fa-bolt"></i>
+                            <h3 class="box-title">Global Running</h3>
+
+                            {#<div class="box-tools pull-right">#}
+                                {#<button#}
+                                        {#type="button"#}
+                                        {#class="btn btn-default pull-right"#}
+                                        {#alt="Crear item"#}
+                                        {#title="Crear item"#}
+                                        {#data-toggle="modal"#}
+                                        {#data-target="#vv">#}
+                                    {#<i class="fa fa-plus"></i> Crear item#}
+                                {#</button>#}
+                            {#</div>#}
+                        </div>
+                    </div>
+
+
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                        </ol>
+                        <div class="carousel-inner" align="center">
+                            <div class="item active" >
+                                <img src="{{ asset('bundles/app/images/splash/splash-1.jpg') }}" alt="First slide">
+
+                                <div class="carousel-caption">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="{{ asset('bundles/app/images/splash/splash-2.jpg') }}" alt="First slide">
+
+                                <div class="carousel-caption">
+                                    Cras convallis a mi vitae euismod. Duis mattis efficitur dictum.
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="{{ asset('bundles/app/images/splash/splash-3.jpg') }}" alt="First slide">
+
+                                <div class="carousel-caption">
+                                    Sed purus dolor, laoreet vel lectus at, auctor feugiat ex.
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="fa fa-angle-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="fa fa-angle-right"></span>
+                        </a>
+                    </div>
+
+                    <br>
+
+                    <div class="box box-solid" style="background-color: #86A914">
+                        <button type="button" class="btn btn-block btn-success btn-sm" data-toggle="modal" data-target="#modal-register">REGISTRARSE</button>
+                        <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-login">INICIAR SESIÒN</button>
+                    </div>
+
+                </section>
+            </div>
+
+        </form>
+    </section>
+
+    {{ include('AppBundle:Modal:register_user.html.twig') }}
+    {{ include('AppBundle:Modal:login_user.html.twig') }}
+
+{% endblock %}

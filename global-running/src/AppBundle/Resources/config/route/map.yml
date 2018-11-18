@@ -1,0 +1,4 @@
+app_map_index:
+    path: /
+    defaults: { _controller: AppBundle:Map:index }
+    methods: [GET, POST]
